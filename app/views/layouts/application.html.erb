@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Burned by Free CSS Templates</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= yield :head %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="outer">
+	<div id="header">
+		<h1><a href="#">Burned</a></h1>
+		<h2>by Free CSS Templates</h2>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="first"><a href="#" accesskey="1" title="">Home</a></li>
+			<li><a href="#" accesskey="2" title="">About Us</a></li>
+			<li><a href="#" accesskey="3" title="">Products</a></li>
+			<li><a href="#" accesskey="4" title="">Services</a></li>
+			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div id="xbg1"></div>
+		<div id="primaryContentContainer">
+                  <div id="primaryContent">
+
+                    <%= yield %>
+                  </div>
+		</div>
+		<div id="secondaryContent">
+			<h3>Etiam suscipit et</h3>
+			<p>Rhoncus ac, lacinia, nisl. Aliquam gravida massa eu arcu. <a href="#">More&#8230;</a></p>
+			<h3>Fusce dolor tristique</h3>
+			<p>Sed eu eros imperdiet eros interdum blandit. Vivamus sagittis bibendum erat. Curabitur malesuada. <a href="#">More&#8230;</a></p>
+			<h3>Nunc pellentesque</h3>
+			<p>Sed vestibulum blandit nisl. Quisque elementum convallis purus. Suspendisse potenti. Donec nulla est, laoreet quis, pellentesque in. <a href="#">More&#8230;</a></p>
+			<h3>Ipsum Dolorem</h3>
+			<ul>
+				<li><a href="#">Sagittis Bibendum Erat</a></li>
+				<li><a href="#">Malesuada Turpis</a></li>
+				<li><a href="#">Quis Gravida Massa</a></li>
+				<li><a href="#">Inerat Viverra Ornare</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="footer">
+		<p>Copyright &copy; 2006 Sitename.com. Designed by <a href="http://www.freecsstemplates.org">Free CSS Templates</a></p>
+	</div>
+</div>
+</body>
+</html>

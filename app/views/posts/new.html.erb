@@ -1,0 +1,30 @@
+<% stylesheet '/ui-lightness/jquery-ui-1.8.20.custom.css' %>
+
+<h1>New post</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', posts_path %>
+
+<script type='text/javascript'>
+    jQuery(function() {
+
+      jQuery('form input[name*=name]').autocomplete({
+        source: "/people",
+        delay: 200,
+        minLength: 2,
+        focus: function( event, ui ) {
+          jQuery(this).val(ui.item.label);
+          return false;
+        },
+
+        select: function( event, ui ) {
+          jQuery(this).val(ui.item.value);
+          jQuery(this).next('input[name*=id]').val(ui.item.id);
+          return false;
+        }
+      });
+
+      jQuery('form input[name*=name]').focus();
+    });
+</script>
